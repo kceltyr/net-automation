@@ -5,7 +5,7 @@
     </extensions>
     <node name="host1" type="SIMPLE" subtype="IOSv" location="358,33" ipv4="172.16.1.241">
         <extensions>
-            <entry key="config" type="string">! IOS Config generated on 2017-09-14 13:12
+            <entry key="config" type="string">! IOS Config generated on 2017-09-14 14:29
 ! by autonetkit_0.23.5
 !
 hostname host1
@@ -119,7 +119,7 @@ end</entry>
     </node>
     <node name="host2" type="SIMPLE" subtype="IOSv" location="627,178" ipv4="172.16.1.242">
         <extensions>
-            <entry key="config" type="string">! IOS Config generated on 2017-09-14 13:12
+            <entry key="config" type="string">! IOS Config generated on 2017-09-14 14:29
 ! by autonetkit_0.23.5
 !
 hostname host2
@@ -233,7 +233,7 @@ end</entry>
     </node>
     <node name="host3" type="SIMPLE" subtype="IOSv" location="377,308" ipv4="172.16.1.243">
         <extensions>
-            <entry key="config" type="string">! IOS Config generated on 2017-09-14 13:12
+            <entry key="config" type="string">! IOS Config generated on 2017-09-14 14:29
 ! by autonetkit_0.23.5
 !
 hostname host3
@@ -347,7 +347,7 @@ end</entry>
     </node>
     <node name="gw" type="SIMPLE" subtype="IOSv" location="99,167" ipv4="172.16.1.240">
         <extensions>
-            <entry key="config" type="string">! IOS Config generated on 2017-09-14 13:12
+            <entry key="config" type="string">! IOS Config generated on 2017-09-14 14:29
 ! by autonetkit_0.23.5
 !
 hostname gw
@@ -462,122 +462,122 @@ end</entry>
     <node name="dist1" type="SIMPLE" subtype="IOSvL2" location="365,107" ipv4="172.16.1.201">
         <extensions>
             <entry key="AutoNetkit.mgmt_ip" type="string"></entry>
-            <entry key="config" type="String">! IOSvL2 Config generated on 2017-09-14 13:12&#xD;
-! by autonetkit_0.23.5&#xD;
-!&#xD;
-version 15.2&#xD;
-service timestamps debug datetime msec&#xD;
-service timestamps log datetime msec&#xD;
-no service password-encryption&#xD;
-service compress-config&#xD;
-no service config&#xD;
-enable password cisco&#xD;
-ip classless&#xD;
-ip subnet-zero&#xD;
-no ip domain lookup&#xD;
-!&#xD;
-line vty 0 4&#xD;
-transport input ssh telnet&#xD;
-exec-timeout 720 0&#xD;
-password cisco&#xD;
-login&#xD;
-!&#xD;
-line con 0&#xD;
-password cisco&#xD;
-!&#xD;
-hostname dist1&#xD;
-!&#xD;
-boot-start-marker&#xD;
-boot-end-marker&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-no aaa new-model&#xD;
-!&#xD;
-vtp domain virl.lab&#xD;
-vtp mode transparent&#xD;
-!&#xD;
-vlan 2&#xD;
-  name ank_vlan2&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-cdp run&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-ip cef&#xD;
-no ipv6 cef&#xD;
-!&#xD;
-!&#xD;
-spanning-tree mode pvst&#xD;
-spanning-tree extend system-id&#xD;
-!&#xD;
-vlan internal allocation policy ascending&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-vrf definition Mgmt-intf&#xD;
-!&#xD;
- address-family ipv4&#xD;
- exit-address-family&#xD;
- !&#xD;
- address-family ipv6&#xD;
- exit-address-family&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-interface Loopback0&#xD;
-  description Loopback&#xD;
-!&#xD;
-interface GigabitEthernet0/0&#xD;
-  description OOB management&#xD;
-  ! Configured on launch&#xD;
-  no switchport&#xD;
-  vrf forwarding Mgmt-intf&#xD;
-  no ip address&#xD;
-  no shutdown&#xD;
-!&#xD;
-interface GigabitEthernet0/1&#xD;
-  description to vpls&#xD;
-  switchport trunk encapsulation dot1q&#xD;
-  switchport mode trunk&#xD;
-  no shutdown&#xD;
-!&#xD;
-interface GigabitEthernet0/2&#xD;
-  description GigabitEthernet0/2&#xD;
-  no shutdown&#xD;
-!&#xD;
-interface GigabitEthernet0/3&#xD;
-  description GigabitEthernet0/3&#xD;
-  no shutdown&#xD;
-!&#xD;
-interface GigabitEthernet1/0&#xD;
-  description to host1&#xD;
-  switchport access vlan 2&#xD;
-  switchport mode access&#xD;
-  no shutdown&#xD;
-!&#xD;
-!&#xD;
-ip forward-protocol nd&#xD;
-!&#xD;
-no ip http server&#xD;
-no ip http secure-server&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-control-plane&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-end&#xD;
+            <entry key="config" type="String">! IOSvL2 Config generated on 2017-09-14 14:29
+! by autonetkit_0.23.5
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
+no service config
+enable password cisco
+ip classless
+ip subnet-zero
+no ip domain lookup
+!
+line vty 0 4
+transport input ssh telnet
+exec-timeout 720 0
+password cisco
+login
+!
+line con 0
+password cisco
+!
+hostname dist1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+vtp domain virl.lab
+vtp mode transparent
+!
+vlan 2
+  name ank_vlan2
+!
+!
+!
+!
+no cdp run
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+!
+!
+!
+vrf definition Mgmt-intf
+!
+ address-family ipv4
+ exit-address-family
+ !
+ address-family ipv6
+ exit-address-family
+!
+!
+!
+!
+!
+interface Loopback0
+  description Loopback
+!
+interface GigabitEthernet0/0
+  description OOB management
+  ! Configured on launch
+  no switchport
+  vrf forwarding Mgmt-intf
+  no ip address
+  no shutdown
+!
+interface GigabitEthernet0/1
+  description to vpls
+  switchport trunk encapsulation dot1q
+  switchport mode trunk
+  no shutdown
+!
+interface GigabitEthernet0/2
+  description GigabitEthernet0/2
+  no shutdown
+!
+interface GigabitEthernet0/3
+  description GigabitEthernet0/3
+  no shutdown
+!
+interface GigabitEthernet1/0
+  description to host1
+  switchport access vlan 2
+  switchport mode access
+  no shutdown
+!
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+end
         </entry>
         </extensions>
         <interface id="0" name="GigabitEthernet0/1"/>
@@ -588,122 +588,122 @@ end&#xD;
     <node name="dist2" type="SIMPLE" subtype="IOSvL2" location="488,175" ipv4="172.16.1.202">
         <extensions>
             <entry key="AutoNetkit.mgmt_ip" type="string"></entry>
-            <entry key="config" type="String">! IOSvL2 Config generated on 2017-09-14 13:12&#xD;
-! by autonetkit_0.23.5&#xD;
-!&#xD;
-version 15.2&#xD;
-service timestamps debug datetime msec&#xD;
-service timestamps log datetime msec&#xD;
-no service password-encryption&#xD;
-service compress-config&#xD;
-no service config&#xD;
-enable password cisco&#xD;
-ip classless&#xD;
-ip subnet-zero&#xD;
-no ip domain lookup&#xD;
-!&#xD;
-line vty 0 4&#xD;
-transport input ssh telnet&#xD;
-exec-timeout 720 0&#xD;
-password cisco&#xD;
-login&#xD;
-!&#xD;
-line con 0&#xD;
-password cisco&#xD;
-!&#xD;
-hostname dist2&#xD;
-!&#xD;
-boot-start-marker&#xD;
-boot-end-marker&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-no aaa new-model&#xD;
-!&#xD;
-vtp domain virl.lab&#xD;
-vtp mode transparent&#xD;
-!&#xD;
-vlan 2&#xD;
-  name ank_vlan2&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-cdp run&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-ip cef&#xD;
-no ipv6 cef&#xD;
-!&#xD;
-!&#xD;
-spanning-tree mode pvst&#xD;
-spanning-tree extend system-id&#xD;
-!&#xD;
-vlan internal allocation policy ascending&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-vrf definition Mgmt-intf&#xD;
-!&#xD;
- address-family ipv4&#xD;
- exit-address-family&#xD;
- !&#xD;
- address-family ipv6&#xD;
- exit-address-family&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-interface Loopback0&#xD;
-  description Loopback&#xD;
-!&#xD;
-interface GigabitEthernet0/0&#xD;
-  description OOB management&#xD;
-  ! Configured on launch&#xD;
-  no switchport&#xD;
-  vrf forwarding Mgmt-intf&#xD;
-  no ip address&#xD;
-  no shutdown&#xD;
-!&#xD;
-interface GigabitEthernet0/1&#xD;
-  description to vpls&#xD;
-  switchport trunk encapsulation dot1q&#xD;
-  switchport mode trunk&#xD;
-  no shutdown&#xD;
-!&#xD;
-interface GigabitEthernet0/2&#xD;
-  description GigabitEthernet0/2&#xD;
-  no shutdown&#xD;
-!&#xD;
-interface GigabitEthernet0/3&#xD;
-  description GigabitEthernet0/3&#xD;
-  no shutdown&#xD;
-!&#xD;
-interface GigabitEthernet1/0&#xD;
-  description to host2&#xD;
-  switchport access vlan 2&#xD;
-  switchport mode access&#xD;
-  no shutdown&#xD;
-!&#xD;
-!&#xD;
-ip forward-protocol nd&#xD;
-!&#xD;
-no ip http server&#xD;
-no ip http secure-server&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-control-plane&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-end&#xD;
+            <entry key="config" type="String">! IOSvL2 Config generated on 2017-09-14 14:29
+! by autonetkit_0.23.5
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
+no service config
+enable password cisco
+ip classless
+ip subnet-zero
+no ip domain lookup
+!
+line vty 0 4
+transport input ssh telnet
+exec-timeout 720 0
+password cisco
+login
+!
+line con 0
+password cisco
+!
+hostname dist2
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+vtp domain virl.lab
+vtp mode transparent
+!
+vlan 2
+  name ank_vlan2
+!
+!
+!
+!
+no cdp run
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+!
+!
+!
+vrf definition Mgmt-intf
+!
+ address-family ipv4
+ exit-address-family
+ !
+ address-family ipv6
+ exit-address-family
+!
+!
+!
+!
+!
+interface Loopback0
+  description Loopback
+!
+interface GigabitEthernet0/0
+  description OOB management
+  ! Configured on launch
+  no switchport
+  vrf forwarding Mgmt-intf
+  no ip address
+  no shutdown
+!
+interface GigabitEthernet0/1
+  description to vpls
+  switchport trunk encapsulation dot1q
+  switchport mode trunk
+  no shutdown
+!
+interface GigabitEthernet0/2
+  description GigabitEthernet0/2
+  no shutdown
+!
+interface GigabitEthernet0/3
+  description GigabitEthernet0/3
+  no shutdown
+!
+interface GigabitEthernet1/0
+  description to host2
+  switchport access vlan 2
+  switchport mode access
+  no shutdown
+!
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+end
         </entry>
         </extensions>
         <interface id="0" name="GigabitEthernet0/1"/>
@@ -714,122 +714,122 @@ end&#xD;
     <node name="dist3" type="SIMPLE" subtype="IOSvL2" location="370,240" ipv4="172.16.1.203">
         <extensions>
             <entry key="AutoNetkit.mgmt_ip" type="string"></entry>
-            <entry key="config" type="String">! IOSvL2 Config generated on 2017-09-14 13:12&#xD;
-! by autonetkit_0.23.5&#xD;
-!&#xD;
-version 15.2&#xD;
-service timestamps debug datetime msec&#xD;
-service timestamps log datetime msec&#xD;
-no service password-encryption&#xD;
-service compress-config&#xD;
-no service config&#xD;
-enable password cisco&#xD;
-ip classless&#xD;
-ip subnet-zero&#xD;
-no ip domain lookup&#xD;
-!&#xD;
-line vty 0 4&#xD;
-transport input ssh telnet&#xD;
-exec-timeout 720 0&#xD;
-password cisco&#xD;
-login&#xD;
-!&#xD;
-line con 0&#xD;
-password cisco&#xD;
-!&#xD;
-hostname dist3&#xD;
-!&#xD;
-boot-start-marker&#xD;
-boot-end-marker&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-no aaa new-model&#xD;
-!&#xD;
-vtp domain virl.lab&#xD;
-vtp mode transparent&#xD;
-!&#xD;
-vlan 2&#xD;
-  name ank_vlan2&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-cdp run&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-ip cef&#xD;
-no ipv6 cef&#xD;
-!&#xD;
-!&#xD;
-spanning-tree mode pvst&#xD;
-spanning-tree extend system-id&#xD;
-!&#xD;
-vlan internal allocation policy ascending&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-vrf definition Mgmt-intf&#xD;
-!&#xD;
- address-family ipv4&#xD;
- exit-address-family&#xD;
- !&#xD;
- address-family ipv6&#xD;
- exit-address-family&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-interface Loopback0&#xD;
-  description Loopback&#xD;
-!&#xD;
-interface GigabitEthernet0/0&#xD;
-  description OOB management&#xD;
-  ! Configured on launch&#xD;
-  no switchport&#xD;
-  vrf forwarding Mgmt-intf&#xD;
-  no ip address&#xD;
-  no shutdown&#xD;
-!&#xD;
-interface GigabitEthernet0/1&#xD;
-  description to vpls&#xD;
-  switchport trunk encapsulation dot1q&#xD;
-  switchport mode trunk&#xD;
-  no shutdown&#xD;
-!&#xD;
-interface GigabitEthernet0/2&#xD;
-  description GigabitEthernet0/2&#xD;
-  no shutdown&#xD;
-!&#xD;
-interface GigabitEthernet0/3&#xD;
-  description GigabitEthernet0/3&#xD;
-  no shutdown&#xD;
-!&#xD;
-interface GigabitEthernet1/0&#xD;
-  description to host3&#xD;
-  switchport access vlan 2&#xD;
-  switchport mode access&#xD;
-  no shutdown&#xD;
-!&#xD;
-!&#xD;
-ip forward-protocol nd&#xD;
-!&#xD;
-no ip http server&#xD;
-no ip http secure-server&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-control-plane&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-end&#xD;
+            <entry key="config" type="String">! IOSvL2 Config generated on 2017-09-14 14:29
+! by autonetkit_0.23.5
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
+no service config
+enable password cisco
+ip classless
+ip subnet-zero
+no ip domain lookup
+!
+line vty 0 4
+transport input ssh telnet
+exec-timeout 720 0
+password cisco
+login
+!
+line con 0
+password cisco
+!
+hostname dist3
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+vtp domain virl.lab
+vtp mode transparent
+!
+vlan 2
+  name ank_vlan2
+!
+!
+!
+!
+no cdp run
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+!
+!
+!
+vrf definition Mgmt-intf
+!
+ address-family ipv4
+ exit-address-family
+ !
+ address-family ipv6
+ exit-address-family
+!
+!
+!
+!
+!
+interface Loopback0
+  description Loopback
+!
+interface GigabitEthernet0/0
+  description OOB management
+  ! Configured on launch
+  no switchport
+  vrf forwarding Mgmt-intf
+  no ip address
+  no shutdown
+!
+interface GigabitEthernet0/1
+  description to vpls
+  switchport trunk encapsulation dot1q
+  switchport mode trunk
+  no shutdown
+!
+interface GigabitEthernet0/2
+  description GigabitEthernet0/2
+  no shutdown
+!
+interface GigabitEthernet0/3
+  description GigabitEthernet0/3
+  no shutdown
+!
+interface GigabitEthernet1/0
+  description to host3
+  switchport access vlan 2
+  switchport mode access
+  no shutdown
+!
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+end
         </entry>
         </extensions>
         <interface id="0" name="GigabitEthernet0/1"/>
@@ -837,241 +837,241 @@ end&#xD;
         <interface id="2" name="GigabitEthernet0/3"/>
         <interface id="3" name="GigabitEthernet1/0"/>
     </node>
-    <node name="core1" type="SIMPLE" subtype="IOSvL2" location="196,172" ipv4="172.16.1.210">
+    <node name="core1" type="SIMPLE" subtype="IOSvL2" location="196,172" ipv4="172.16.1.211">
         <extensions>
             <entry key="AutoNetkit.mgmt_ip" type="string"></entry>
-            <entry key="config" type="String">! IOSvL2 Config generated on 2017-09-14 13:12&#xD;
-! by autonetkit_0.23.5&#xD;
-!&#xD;
-version 15.2&#xD;
-service timestamps debug datetime msec&#xD;
-service timestamps log datetime msec&#xD;
-no service password-encryption&#xD;
-service compress-config&#xD;
-no service config&#xD;
-enable password cisco&#xD;
-ip classless&#xD;
-ip subnet-zero&#xD;
-no ip domain lookup&#xD;
-!&#xD;
-line vty 0 4&#xD;
-transport input ssh telnet&#xD;
-exec-timeout 720 0&#xD;
-password cisco&#xD;
-login&#xD;
-!&#xD;
-line con 0&#xD;
-password cisco&#xD;
-!&#xD;
-hostname core1&#xD;
-!&#xD;
-boot-start-marker&#xD;
-boot-end-marker&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-no aaa new-model&#xD;
-!&#xD;
-vtp domain virl.lab&#xD;
-vtp mode transparent&#xD;
-!&#xD;
-vlan 2&#xD;
-  name ank_vlan2&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-cdp run&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-ip cef&#xD;
-no ipv6 cef&#xD;
-!&#xD;
-!&#xD;
-spanning-tree mode pvst&#xD;
-spanning-tree extend system-id&#xD;
-!&#xD;
-vlan internal allocation policy ascending&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-vrf definition Mgmt-intf&#xD;
-!&#xD;
- address-family ipv4&#xD;
- exit-address-family&#xD;
- !&#xD;
- address-family ipv6&#xD;
- exit-address-family&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-interface Loopback0&#xD;
-  description Loopback&#xD;
-!&#xD;
-interface GigabitEthernet0/0&#xD;
-  description OOB management&#xD;
-  ! Configured on launch&#xD;
-  no switchport&#xD;
-  vrf forwarding Mgmt-intf&#xD;
-  no ip address&#xD;
-  no shutdown&#xD;
-!&#xD;
-interface GigabitEthernet0/1&#xD;
-  description to gw&#xD;
-  switchport access vlan 2&#xD;
-  switchport mode access&#xD;
-  no shutdown&#xD;
-!&#xD;
-interface GigabitEthernet0/2&#xD;
-  description to core2&#xD;
-  switchport trunk encapsulation dot1q&#xD;
-  switchport mode trunk&#xD;
-  no shutdown&#xD;
-!&#xD;
-!&#xD;
-ip forward-protocol nd&#xD;
-!&#xD;
-no ip http server&#xD;
-no ip http secure-server&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-control-plane&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-end&#xD;
+            <entry key="config" type="String">! IOSvL2 Config generated on 2017-09-14 14:29
+! by autonetkit_0.23.5
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
+no service config
+enable password cisco
+ip classless
+ip subnet-zero
+no ip domain lookup
+!
+line vty 0 4
+transport input ssh telnet
+exec-timeout 720 0
+password cisco
+login
+!
+line con 0
+password cisco
+!
+hostname core1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+vtp domain virl.lab
+vtp mode transparent
+!
+vlan 2
+  name ank_vlan2
+!
+!
+!
+!
+no cdp run
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+!
+!
+!
+vrf definition Mgmt-intf
+!
+ address-family ipv4
+ exit-address-family
+ !
+ address-family ipv6
+ exit-address-family
+!
+!
+!
+!
+!
+interface Loopback0
+  description Loopback
+!
+interface GigabitEthernet0/0
+  description OOB management
+  ! Configured on launch
+  no switchport
+  vrf forwarding Mgmt-intf
+  no ip address
+  no shutdown
+!
+interface GigabitEthernet0/1
+  description to gw
+  switchport access vlan 2
+  switchport mode access
+  no shutdown
+!
+interface GigabitEthernet0/2
+  description to core2
+  switchport trunk encapsulation dot1q
+  switchport mode trunk
+  no shutdown
+!
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+end
         </entry>
         </extensions>
         <interface id="0" name="GigabitEthernet0/1"/>
         <interface id="1" name="GigabitEthernet0/2"/>
     </node>
-    <node name="core2" type="SIMPLE" subtype="IOSvL2" location="276,173" ipv4="172.16.1.202">
+    <node name="core2" type="SIMPLE" subtype="IOSvL2" location="276,173" ipv4="172.16.1.212">
         <extensions>
             <entry key="AutoNetkit.mgmt_ip" type="string"></entry>
-            <entry key="config" type="String">! IOSvL2 Config generated on 2017-09-14 13:12&#xD;
-! by autonetkit_0.23.5&#xD;
-!&#xD;
-version 15.2&#xD;
-service timestamps debug datetime msec&#xD;
-service timestamps log datetime msec&#xD;
-no service password-encryption&#xD;
-service compress-config&#xD;
-no service config&#xD;
-enable password cisco&#xD;
-ip classless&#xD;
-ip subnet-zero&#xD;
-no ip domain lookup&#xD;
-!&#xD;
-line vty 0 4&#xD;
-transport input ssh telnet&#xD;
-exec-timeout 720 0&#xD;
-password cisco&#xD;
-login&#xD;
-!&#xD;
-line con 0&#xD;
-password cisco&#xD;
-!&#xD;
-hostname core2&#xD;
-!&#xD;
-boot-start-marker&#xD;
-boot-end-marker&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-no aaa new-model&#xD;
-!&#xD;
-vtp domain virl.lab&#xD;
-vtp mode transparent&#xD;
-!&#xD;
-vlan 2&#xD;
-  name ank_vlan2&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-cdp run&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-ip cef&#xD;
-no ipv6 cef&#xD;
-!&#xD;
-!&#xD;
-spanning-tree mode pvst&#xD;
-spanning-tree extend system-id&#xD;
-!&#xD;
-vlan internal allocation policy ascending&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-vrf definition Mgmt-intf&#xD;
-!&#xD;
- address-family ipv4&#xD;
- exit-address-family&#xD;
- !&#xD;
- address-family ipv6&#xD;
- exit-address-family&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-interface Loopback0&#xD;
-  description Loopback&#xD;
-!&#xD;
-interface GigabitEthernet0/0&#xD;
-  description OOB management&#xD;
-  ! Configured on launch&#xD;
-  no switchport&#xD;
-  vrf forwarding Mgmt-intf&#xD;
-  no ip address&#xD;
-  no shutdown&#xD;
-!&#xD;
-interface GigabitEthernet0/1&#xD;
-  description to core1&#xD;
-  switchport trunk encapsulation dot1q&#xD;
-  switchport mode trunk&#xD;
-  no shutdown&#xD;
-!&#xD;
-interface GigabitEthernet0/2&#xD;
-  description to vpls&#xD;
-  switchport trunk encapsulation dot1q&#xD;
-  switchport mode trunk&#xD;
-  no shutdown&#xD;
-!&#xD;
-interface GigabitEthernet0/3&#xD;
-  description GigabitEthernet0/3&#xD;
-  no shutdown&#xD;
-!&#xD;
-interface GigabitEthernet1/0&#xD;
-  description GigabitEthernet1/0&#xD;
-  no shutdown&#xD;
-!&#xD;
-!&#xD;
-ip forward-protocol nd&#xD;
-!&#xD;
-no ip http server&#xD;
-no ip http secure-server&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-control-plane&#xD;
-!&#xD;
-!&#xD;
-!&#xD;
-end&#xD;
+            <entry key="config" type="String">! IOSvL2 Config generated on 2017-09-14 14:29
+! by autonetkit_0.23.5
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
+no service config
+enable password cisco
+ip classless
+ip subnet-zero
+no ip domain lookup
+!
+line vty 0 4
+transport input ssh telnet
+exec-timeout 720 0
+password cisco
+login
+!
+line con 0
+password cisco
+!
+hostname core2
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+vtp domain virl.lab
+vtp mode transparent
+!
+vlan 2
+  name ank_vlan2
+!
+!
+!
+!
+no cdp run
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+!
+!
+!
+vrf definition Mgmt-intf
+!
+ address-family ipv4
+ exit-address-family
+ !
+ address-family ipv6
+ exit-address-family
+!
+!
+!
+!
+!
+interface Loopback0
+  description Loopback
+!
+interface GigabitEthernet0/0
+  description OOB management
+  ! Configured on launch
+  no switchport
+  vrf forwarding Mgmt-intf
+  no ip address
+  no shutdown
+!
+interface GigabitEthernet0/1
+  description to core1
+  switchport trunk encapsulation dot1q
+  switchport mode trunk
+  no shutdown
+!
+interface GigabitEthernet0/2
+  description to vpls
+  switchport trunk encapsulation dot1q
+  switchport mode trunk
+  no shutdown
+!
+interface GigabitEthernet0/3
+  description GigabitEthernet0/3
+  no shutdown
+!
+interface GigabitEthernet1/0
+  description GigabitEthernet1/0
+  no shutdown
+!
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+end
         </entry>
         </extensions>
         <interface id="0" name="GigabitEthernet0/1"/>
@@ -1081,7 +1081,7 @@ end&#xD;
     </node>
     <node name="vpls" type="SIMPLE" subtype="IOSvL2" location="364,167" ipv4="172.16.1.200">
         <extensions>
-            <entry key="config" type="string">! IOSvL2 Config generated on 2017-09-14 13:12
+            <entry key="config" type="string">! IOSvL2 Config generated on 2017-09-14 14:29
 ! by autonetkit_0.23.5
 !
 version 15.2
