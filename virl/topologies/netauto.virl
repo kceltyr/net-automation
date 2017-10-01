@@ -10,8 +10,9 @@
         <extensions>
             <entry key="AutoNetkit.mgmt_ip" type="string"></entry>
             <entry key="static_ip" type="String">172.16.1.241</entry>
+            <entry key="Auto-generate config" type="Boolean">false</entry>
             <entry key="config" type="String">!
-! Last configuration change at 16:12:49 UTC Thu Sep 14 2017 by cisco
+! Last configuration change at 09:50:28 UTC Sun Oct 1 2017
 !
 version 15.6
 service timestamps debug datetime msec
@@ -154,7 +155,6 @@ line vty 0 4
 no scheduler allocate
 !
 end</entry>
-            <entry key="Auto-generate config" type="Boolean">false</entry>
         </extensions>
         <interface id="0" name="GigabitEthernet0/1" ipv4="10.0.0.1" netPrefixLenV4="16"/>
     </node>
@@ -162,8 +162,9 @@ end</entry>
         <extensions>
             <entry key="AutoNetkit.mgmt_ip" type="string"></entry>
             <entry key="static_ip" type="String">172.16.1.242</entry>
+            <entry key="Auto-generate config" type="Boolean">false</entry>
             <entry key="config" type="String">!
-! Last configuration change at 16:14:42 UTC Thu Sep 14 2017 by cisco
+! Last configuration change at 09:40:34 UTC Sun Oct 1 2017
 !
 version 15.6
 service timestamps debug datetime msec
@@ -306,7 +307,6 @@ line vty 0 4
 no scheduler allocate
 !
 end</entry>
-            <entry key="Auto-generate config" type="Boolean">false</entry>
         </extensions>
         <interface id="0" name="GigabitEthernet0/1" ipv4="10.0.0.2" netPrefixLenV4="16"/>
     </node>
@@ -314,8 +314,9 @@ end</entry>
         <extensions>
             <entry key="AutoNetkit.mgmt_ip" type="string"></entry>
             <entry key="static_ip" type="String">172.16.1.243</entry>
+            <entry key="Auto-generate config" type="Boolean">false</entry>
             <entry key="config" type="String">!
-! Last configuration change at 16:15:34 UTC Thu Sep 14 2017 by cisco
+! Last configuration change at 09:40:36 UTC Sun Oct 1 2017
 !
 version 15.6
 service timestamps debug datetime msec
@@ -458,7 +459,6 @@ line vty 0 4
 no scheduler allocate
 !
 end</entry>
-            <entry key="Auto-generate config" type="Boolean">false</entry>
         </extensions>
         <interface id="0" name="GigabitEthernet0/1" ipv4="10.0.0.3" netPrefixLenV4="16"/>
     </node>
@@ -466,8 +466,9 @@ end</entry>
         <extensions>
             <entry key="AutoNetkit.mgmt_ip" type="string"></entry>
             <entry key="static_ip" type="String">172.16.1.240</entry>
+            <entry key="Auto-generate config" type="Boolean">false</entry>
             <entry key="config" type="String">!
-! Last configuration change at 16:14:06 UTC Thu Sep 14 2017 by cisco
+! Last configuration change at 09:40:22 UTC Sun Oct 1 2017
 !
 version 15.6
 service timestamps debug datetime msec
@@ -610,7 +611,6 @@ line vty 0 4
 no scheduler allocate
 !
 end</entry>
-            <entry key="Auto-generate config" type="Boolean">false</entry>
         </extensions>
         <interface id="0" name="GigabitEthernet0/1" ipv4="10.0.0.4" netPrefixLenV4="16"/>
     </node>
@@ -618,8 +618,9 @@ end</entry>
         <extensions>
             <entry key="AutoNetkit.mgmt_ip" type="string"></entry>
             <entry key="static_ip" type="String">172.16.1.201</entry>
+            <entry key="Auto-generate config" type="Boolean">false</entry>
             <entry key="config" type="String">!
-! Last configuration change at 16:19:41 UTC Thu Sep 14 2017
+! Last configuration change at 09:40:10 UTC Sun Oct 1 2017
 !
 version 15.2
 service timestamps debug datetime msec
@@ -769,7 +770,6 @@ line vty 0 4
 !
 !
 end</entry>
-            <entry key="Auto-generate config" type="Boolean">false</entry>
         </extensions>
         <interface id="0" name="GigabitEthernet0/1"/>
         <interface id="1" name="GigabitEthernet0/2"/>
@@ -780,8 +780,9 @@ end</entry>
         <extensions>
             <entry key="AutoNetkit.mgmt_ip" type="string"></entry>
             <entry key="static_ip" type="String">172.16.1.202</entry>
+            <entry key="Auto-generate config" type="Boolean">false</entry>
             <entry key="config" type="String">!
-! Last configuration change at 16:20:20 UTC Thu Sep 14 2017
+! Last configuration change at 09:40:17 UTC Sun Oct 1 2017
 !
 version 15.2
 service timestamps debug datetime msec
@@ -931,7 +932,6 @@ line vty 0 4
 !
 !
 end</entry>
-            <entry key="Auto-generate config" type="Boolean">false</entry>
         </extensions>
         <interface id="0" name="GigabitEthernet0/1"/>
         <interface id="1" name="GigabitEthernet0/2"/>
@@ -942,8 +942,9 @@ end</entry>
         <extensions>
             <entry key="AutoNetkit.mgmt_ip" type="string"></entry>
             <entry key="static_ip" type="String">172.16.1.203</entry>
+            <entry key="Auto-generate config" type="Boolean">false</entry>
             <entry key="config" type="String">!
-! Last configuration change at 16:21:03 UTC Thu Sep 14 2017
+! Last configuration change at 09:40:10 UTC Sun Oct 1 2017
 !
 version 15.2
 service timestamps debug datetime msec
@@ -1093,7 +1094,6 @@ line vty 0 4
 !
 !
 end</entry>
-            <entry key="Auto-generate config" type="Boolean">false</entry>
         </extensions>
         <interface id="0" name="GigabitEthernet0/1"/>
         <interface id="1" name="GigabitEthernet0/2"/>
@@ -1104,8 +1104,9 @@ end</entry>
         <extensions>
             <entry key="AutoNetkit.mgmt_ip" type="string"></entry>
             <entry key="static_ip" type="String">172.16.1.211</entry>
+            <entry key="Auto-generate config" type="Boolean">false</entry>
             <entry key="config" type="String">!
-! Last configuration change at 16:18:02 UTC Thu Sep 14 2017
+! Last configuration change at 09:39:19 UTC Sun Oct 1 2017
 !
 version 15.2
 service timestamps debug datetime msec
@@ -1245,7 +1246,6 @@ line vty 0 4
 !
 !
 end</entry>
-            <entry key="Auto-generate config" type="Boolean">false</entry>
         </extensions>
         <interface id="0" name="GigabitEthernet0/1"/>
         <interface id="1" name="GigabitEthernet0/2"/>
@@ -1255,8 +1255,9 @@ end</entry>
             <entry key="AutoNetkit.mgmt_ip" type="string"></entry>
             <entry key="static_ip" type="String">172.16.1.212</entry>
             <entry key="AutoNetkit.ASN" type="Integer">0</entry>
+            <entry key="Auto-generate config" type="Boolean">false</entry>
             <entry key="config" type="String">!
-! Last configuration change at 16:19:07 UTC Thu Sep 14 2017
+! Last configuration change at 09:40:05 UTC Sun Oct 1 2017
 !
 version 15.2
 service timestamps debug datetime msec
@@ -1406,7 +1407,6 @@ line vty 0 4
 !
 !
 end</entry>
-            <entry key="Auto-generate config" type="Boolean">false</entry>
         </extensions>
         <interface id="0" name="GigabitEthernet0/1"/>
         <interface id="1" name="GigabitEthernet0/2"/>
@@ -1417,8 +1417,9 @@ end</entry>
         <extensions>
             <entry key="AutoNetkit.mgmt_ip" type="string"></entry>
             <entry key="static_ip" type="String">172.16.1.200</entry>
+            <entry key="Auto-generate config" type="Boolean">false</entry>
             <entry key="config" type="String">!
-! Last configuration change at 16:21:52 UTC Thu Sep 14 2017
+! Last configuration change at 09:41:11 UTC Sun Oct 1 2017
 !
 version 15.2
 service timestamps debug datetime msec
@@ -1572,7 +1573,6 @@ line vty 0 4
 !
 !
 end</entry>
-            <entry key="Auto-generate config" type="Boolean">false</entry>
         </extensions>
         <interface id="0" name="GigabitEthernet0/1"/>
         <interface id="1" name="GigabitEthernet0/2"/>

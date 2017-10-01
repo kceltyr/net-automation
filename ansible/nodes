@@ -13,9 +13,15 @@ dist3
 vpls
 
 
-
-
-
 [all:vars]
-ansible_user=cisco
-ansible_ssh_pass=cisco
+
+
+[hosts:vars]
+
+
+[gw:vars]
+
+
+[switches:vars]
+
+
