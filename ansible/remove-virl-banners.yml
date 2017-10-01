@@ -1,0 +1,10 @@
+---
+- hosts: ios
+  tasks:
+  - name: "Remove annoying banners from VIRL nodes"
+    ios_config:
+      provider: "{{cli}}"
+      lines:
+        - "no banner login"
+        - "no banner exec"
+        - "no banner incoming"

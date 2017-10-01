@@ -12,6 +12,15 @@ dist2
 dist3
 vpls
 
+[ios]
+host1
+host2
+host3
+gw
+dist1
+dist2
+dist3
+vpls
 
 [all:vars]
 
@@ -24,4 +33,5 @@ vpls
 
 [switches:vars]
 
+[ios:vars]
 
