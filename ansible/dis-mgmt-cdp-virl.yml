@@ -1,0 +1,10 @@
+---
+- hosts: ios
+  tasks:
+  - name: "Disable CDP on g0/0"
+    ios_config:
+      provider: "{{cli}}"
+      parents:
+        - "interface g0/0"
+      lines:
+        - "no cdp enable"

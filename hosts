@@ -1,0 +1,23 @@
+127.0.0.1	nms	nms
+127.0.0.1	localhost
+127.0.1.1	ubuntu-14.04-amd64-vmwarefusion	ubuntu-14
+
+172.16.1.200    vpls
+172.16.1.201	dist1
+172.16.1.202	dist2
+172.16.1.203	dist3
+
+172.16.1.211	core1
+172.16.1.212	core2
+
+172.16.1.240	gw
+172.16.1.241	host1
+172.16.1.242	host2
+172.16.1.243	host3
+
+
+
+# The following lines are desirable for IPv6 capable hosts
+::1     localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
