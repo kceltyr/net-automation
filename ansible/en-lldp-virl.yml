@@ -1,0 +1,16 @@
+---
+- hosts: ios
+  tasks:
+  - name: "Enable LLDP"
+    ios_config:
+      provider: "{{cli}}"
+      lines:
+        - "lldp run"
+  - name: "Disable LLDP on g0/0"
+    ios_config:
+      provider: "{{cli}}"
+      parents:
+        - "interface g0/0"
+      lines:
+        - "no lldp transmit"
+        - "no lldp receive"

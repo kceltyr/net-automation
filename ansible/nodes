@@ -11,6 +11,8 @@ dist1
 dist2
 dist3
 vpls
+core1
+core2
 
 [ios]
 host1
@@ -21,6 +23,8 @@ dist1
 dist2
 dist3
 vpls
+core1
+core2
 
 [all:vars]
 
