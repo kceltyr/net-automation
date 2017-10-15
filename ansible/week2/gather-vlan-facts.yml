@@ -1,0 +1,17 @@
+#
+# Retrieve vlan information, parse, store as facts
+#
+
+---
+- hosts: l2transport
+  tasks:
+  - ios_command:
+      commands:
+        - show interface status
+        - show interface trunk
+    register: command_output
+  - set_fact:
+#      interface_status: "{{ command_output.stdout[0] | parse_cli('./parse-int-status.filter') }}"
+      trunk_status: "{{ command_output.stdout[1] | parse_cli('./parse-trunk-members.filter') }}"
+  - debug: var=hostvars[inventory_hostname]['interface_status']
+#  - debug: var=command_output

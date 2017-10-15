@@ -1,0 +1,15 @@
+#
+# Filter for CLI output of sh int status, returns name, interface status and trunking/routing mode
+#
+---
+vars:
+  interface:
+    key: "{{ item.ifname }}"
+    values:
+      status: "{{ item.status }}"
+      mode: "{{ item.mode }}"
+keys:
+  interfaces:
+    type: list
+    value: "{{ interface }}"
+    items: "(?P<ifname>\\w\\w\\d/\\d{1,2})\\s+(?P<status>(connected|shutdown|errdisable|disabled))\\s+(?P<mode>(routed|trunk|\\d{1,4}))"

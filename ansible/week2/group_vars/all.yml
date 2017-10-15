@@ -1,0 +1,8 @@
+---
+ansible_user: cisco
+ansible_ssh_pass: cisco
+ansible_device_os: ios
+cli:
+  username: "{{ansible_user}}"
+  password: "{{ansible_password}}"
+  host:     "{{inventory_hostname}}"

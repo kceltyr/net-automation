@@ -1,0 +1,11 @@
+---
+- name: Test vlan expansion plugin
+  hosts: localhost
+  connection: local
+  vars:
+    test_string: "1,3,12-15,18"
+    expanded_list: [1, 3, 12, 13, 14, 15, 18]
+  tasks:
+  - assert:
+      that: "{{ test_string|expand_vlans }} is equalto({{ expanded_list }})"
+      msg: VLAN string expansion failed.

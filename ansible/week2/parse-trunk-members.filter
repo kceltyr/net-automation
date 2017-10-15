@@ -1,0 +1,17 @@
+#
+# Filter for CLI output of sh int trunk, returns the interface with the trunks allowed on the interface THAT ARE ALSO CONFIGURED ON THE SWITCH
+#
+---
+vars:
+  interface:
+    key: "{{ item.ifname }}"
+    values:
+      trunk_vlans: "{{ item.vlans }}"
+keys:
+  interfaces:
+    start_block: "Vlans allowed and active"
+    end_block: ".*Vlans in spanning tree.*"
+    type: list
+    value: "{{ interface }}"
+    items: "(?P<ifname>\\w\\w\\d/\\d{1,2})\\s+(?P<vlans>\\d{1,4}((-|,)\\d{1,4})*)"
+    # example            G  i  0/  3                 110       ,   300
