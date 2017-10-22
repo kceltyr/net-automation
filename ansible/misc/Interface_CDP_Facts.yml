@@ -1,0 +1,11 @@
+---
+- hosts: vpls
+  tasks:
+  - name: Get Interface Info and Config
+    napalm_get_facts:
+      filter:
+      - lldp_neighbors
+      - config
+      provider: "{{cli}}"
+
+  - debug: var=hostvars[inventory_hostname].stdout_lines

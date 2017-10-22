@@ -1,0 +1,32 @@
+#
+# Retrieve vlan information, parse, store as facts
+#
+
+---
+- hosts: switches
+  vars:
+    #ensure command line input is an int
+    target: "{{ vlan|default(1)|int }}"
+  tasks:
+  - name: Retrieve trunk data
+    ios_command:
+      commands:
+        - show interface trunk
+    register: command_output
+  - name: Parse cli output
+    set_fact:
+      trunk_status: "{{ command_output.stdout[0] | parse_cli('./parse-trunk-members.filter') }}"
+  - name: Create default output dir
+    shell: mkdir diagrams
+    args: 
+      creates: diagrams/
+    delegate_to: localhost
+    run_once: true
+  - name: Generate graph file
+    template: src={{template|default('vlan-graph.j2')}} dest=./diagrams/{{dotOutput|default('vlan' + target + '.dot')}}
+    run_once: true
+  - name: Render graph
+    shell: dot -Tpng ./diagrams/{{dotOutput|default('vlan' + target + '.dot')}} >./diagrams/{{pngOutput|default('vlan' + target + '.png')}}
+    delegate_to: localhost  
+    run_once: true
+    

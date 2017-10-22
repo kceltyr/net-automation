@@ -1,0 +1,18 @@
+digraph network {
+  labelloc="t";
+  label="VLAN {{ target}} Trunking Diagram"
+  core1 -> gateway [headlabel="Gi0/0" taillabel="Gi0/0" fontsize=8.0 color={% if target|int in (hostvars["core1.lab.local"]["trunk_status"]["interfaces"]["Gi0/0"]["trunk_vlans"]|expand_vlans) %}red{% else %}gray{% endif %}];
+  core1 -> core2 [headlabel="Gi0/1" taillabel="Gi0/1" fontsize=8.0 color={% if target|int in (hostvars["core1.lab.local"]["trunk_status"]["interfaces"]["Gi0/1"]["trunk_vlans"]|expand_vlans) %}red{% else %}gray{% endif %}];
+  core2 -> core1 [headlabel="Gi0/1" taillabel="Gi0/1" fontsize=8.0 color={% if target|int in (hostvars["core2.lab.local"]["trunk_status"]["interfaces"]["Gi0/1"]["trunk_vlans"]|expand_vlans) %}red{% else %}gray{% endif %}];
+  core2 -> vpls [headlabel="Gi0/0" taillabel="Gi0/0" fontsize=8.0 color={% if target|int in (hostvars["core2.lab.local"]["trunk_status"]["interfaces"]["Gi0/0"]["trunk_vlans"]|expand_vlans) %}red{% else %}gray{% endif %}];
+  vpls -> core2 [headlabel="Gi0/0" taillabel="Gi0/0" fontsize=8.0 color={% if target|int in (hostvars["vpls.lab.local"]["trunk_status"]["interfaces"]["Gi0/0"]["trunk_vlans"]|expand_vlans) %}red{% else %}gray{% endif %}];
+  vpls -> dist1 [headlabel="Gi0/1" taillabel="Gi0/1" fontsize=8.0 color={% if target|int in (hostvars["vpls.lab.local"]["trunk_status"]["interfaces"]["Gi0/1"]["trunk_vlans"]|expand_vlans) %}red{% else %}gray{% endif %}];
+  dist1 -> vpls [headlabel="Gi0/1" taillabel="Gi0/1" fontsize=8.0 color={% if target|int in (hostvars["dist1.lab.local"]["trunk_status"]["interfaces"]["Gi0/1"]["trunk_vlans"]|expand_vlans) %}red{% else %}gray{% endif %}];
+  dist1 -> host1 [headlabel="Gi0/0" taillabel="Gi0/0" fontsize=8.0 color={% if target|int in (hostvars["dist1.lab.local"]["trunk_status"]["interfaces"]["Gi0/0"]["trunk_vlans"]|expand_vlans) %}red{% else %}gray{% endif %}];
+  vpls -> dist2 [headlabel="Gi0/2" taillabel="Gi0/1" fontsize=8.0 color={% if target|int in (hostvars["vpls.lab.local"]["trunk_status"]["interfaces"]["Gi0/2"]["trunk_vlans"]|expand_vlans) %}red{% else %}gray{% endif %}];
+  dist2 -> vpls [headlabel="Gi0/1" taillabel="Gi0/2" fontsize=8.0 color={% if target|int in (hostvars["dist3.lab.local"]["trunk_status"]["interfaces"]["Gi0/1"]["trunk_vlans"]|expand_vlans) %}red{% else %}gray{% endif %}];
+  dist2 -> host2 [headlabel="Gi0/0" taillabel="Gi0/0" fontsize=8.0 color={% if target|int in (hostvars["dist3.lab.local"]["trunk_status"]["interfaces"]["Gi0/0"]["trunk_vlans"]|expand_vlans) %}red{% else %}gray{% endif %}];
+  vpls -> dist3 [headlabel="Gi0/3" taillabel="Gi0/1" fontsize=8.0 color={% if target|int in (hostvars["vpls.lab.local"]["trunk_status"]["interfaces"]["Gi0/3"]["trunk_vlans"]|expand_vlans) %}red{% else %}gray{% endif %}];
+  dist3 -> vpls [headlabel="Gi0/1" taillabel="Gi0/3" fontsize=8.0 color={% if target|int in (hostvars["dist3.lab.local"]["trunk_status"]["interfaces"]["Gi0/1"]["trunk_vlans"]|expand_vlans) %}red{% else %}gray{% endif %}];
+  dist3 -> host3 [headlabel="Gi0/0" taillabel="Gi0/0" fontsize=8.0 color={% if target|int in (hostvars["dist3.lab.local"]["trunk_status"]["interfaces"]["Gi0/0"]["trunk_vlans"]|expand_vlans) %}red{% else %}gray{% endif %}];
+}

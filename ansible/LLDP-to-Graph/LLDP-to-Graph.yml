@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: switches
   tasks:
   - name: "Get LLDP neighbors"
     napalm_get_facts:

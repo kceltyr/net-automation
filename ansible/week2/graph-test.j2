@@ -1,0 +1,16 @@
+graph network {
+  "core1":"Gi0/0" -> "gateway":"Gi0/0" [color={% if {{ target }} in hostvars[core1.lab.local][interfaces][Gi0/0][trunk_vlans] %} #870000 {% else %} #333333 {% endif %}];
+  "core1":"Gi0/1" -> "core2":"Gi0/1" [color={% if {{ target }} in hostvars[core1.lab.local][interfaces][Gi0/1][trunk_vlans] %} #870000 {% else %} #333333 {% endif %}];
+  "core2":"Gi0/1" -> "core1":"Gi0/1" [color={% if {{ target }} in hostvars[core2.lab.local][interfaces][Gi0/1][trunk_vlans] %} #870000 {% else %} #333333 {% endif %}];
+  "core2":"Gi0/0" -> "vpls":"Gi0/0" [color={% if {{ target }} in hostvars[core2.lab.local][interfaces][Gi0/0][trunk_vlans] %} #870000 {% else %} #333333 {% endif %}];
+  "vpls":"Gi0/0" -> "core2":"Gi0/0" [color={% if {{ target }} in hostvars[vpls.lab.local][interfaces][Gi0/0][trunk_vlans] %} #870000 {% else %} #333333 {% endif %}];
+  "vpls":"Gi0/1" -> "dist1":"Gi0/1" [color={% if {{ target }} in hostvars[vpls.lab.local][interfaces][Gi0/1][trunk_vlans] %} #870000 {% else %} #333333 {% endif %}];
+  "dist1":"Gi0/1" -> "vpls":"Gi0/1" [color={% if {{ target }} in hostvars[dist1.lab.local][interfaces][Gi0/1][trunk_vlans] %} #870000 {% else %} #333333 {% endif %}];
+  "dist1":"Gi0/0" -> "host1":"Gi0/0" [color={% if {{ target }} in hostvars[dist1.lab.local][interfaces][Gi0/0][trunk_vlans] %} #870000 {% else %} #333333 {% endif %}];
+  "vpls":"Gi0/2" -> "dist2":"Gi0/1" [color={% if {{ target }} in hostvars[vpls.lab.local][interfaces][Gi0/2][trunk_vlans] %} #870000 {% else %} #333333 {% endif %}];
+  "dist2":"Gi0/1" -> "vpls":"Gi0/2" [color={% if {{ target }} in hostvars[dist2.lab.local][interfaces][Gi0/1][trunk_vlans] %} #870000 {% else %} #333333 {% endif %}];
+  "dist2":"Gi0/0" -> "host2":"Gi0/0" [color={% if {{ target }} in hostvars[dist2.lab.local][interfaces][Gi0/0][trunk_vlans] %} #870000 {% else %} #333333 {% endif %}];
+  "vpls":"Gi0/3" -> "dist3":"Gi0/1" [color={% if {{ target }} in hostvars[vpls.lab.local][interfaces][Gi0/3][trunk_vlans] %} #870000 {% else %} #333333 {% endif %}];
+  "dist3":"Gi0/1" -> "vpls":"Gi0/3" [color={% if {{ target }} in hostvars[dist3.lab.local][interfaces][Gi0/1][trunk_vlans] %} #870000 {% else %} #333333 {% endif %}];
+  "dist3":"Gi0/0" -> "host3":"Gi0/0" [color={% if {{ target }} in hostvars[dist3.lab.local][interfaces][Gi0/0][trunk_vlans] %} #870000 {% else %} #333333 {% endif %}];
+}

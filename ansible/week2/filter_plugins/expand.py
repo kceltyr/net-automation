@@ -4,26 +4,28 @@
 # Output example list expanded = [10, 20, 23, 27, 28, 29, 30, 41]
 #
 
-from jinja2 import TemplateError
 
 class FilterModule(object):
 
     def expand_vlans(self,vlanList,*argv):
- #       print vlanList
- #       if type(vlanList) is not str:
- #           raise TemplateError("First argument must be string of vlans")
-    
+#        print vlanList
+#        print(type(vlanList))
+
         expanded = []
-        splitList = vlanList.split(",")
-      
-        for item in splitList:
-            if "-" in item:
-                chunk = item.split("-")
-                for vlan in range(int(chunk[0]), int(chunk[1]) + 1):
-                    expanded.append(vlan)
-            else:
-                expanded.append(int(item))
-    
+        
+        if type(vlanList) is list:
+            expanded = vlanList
+        else:        
+            splitList = vlanList.split(",")
+          
+            for item in splitList:
+                if "-" in item:
+                    chunk = item.split("-")
+                    for vlan in range(int(chunk[0]), int(chunk[1]) + 1):
+                        expanded.append(vlan)
+                else:
+                    expanded.append(int(item))
+        
         return expanded
     
     def filters(self):

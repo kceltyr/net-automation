@@ -6,11 +6,11 @@ vars:
   interface:
     key: "{{ item.ifname }}"
     values:
-      trunk_vlans: "{{ item.vlans }}"
+      trunk_vlans: "{{ (item.vlans) }}"
 keys:
   interfaces:
     start_block: "Vlans allowed and active"
-    end_block: ".*Vlans in spanning tree.*"
+#    end_block: ".*Vlans in spanning tree.*"
     type: list
     value: "{{ interface }}"
     items: "(?P<ifname>\\w\\w\\d/\\d{1,2})\\s+(?P<vlans>\\d{1,4}((-|,)\\d{1,4})*)"

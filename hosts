@@ -2,18 +2,18 @@
 127.0.0.1	localhost
 127.0.1.1	ubuntu-14.04-amd64-vmwarefusion	ubuntu-14
 
-172.16.1.200    vpls
-172.16.1.201	dist1
-172.16.1.202	dist2
-172.16.1.203	dist3
+172.16.1.100    vpls.lab.local
+172.16.1.110	dist1.lab.local
+172.16.1.120	dist2.lab.local
+172.16.1.130	dist3.lab.local
 
-172.16.1.211	core1
-172.16.1.212	core2
+172.16.1.140	core1.lab.local
+172.16.1.150	core2.lab.local
 
-172.16.1.240	gw
-172.16.1.241	host1
-172.16.1.242	host2
-172.16.1.243	host3
+172.16.1.200	gateway.lab.local
+172.16.1.210	host1.lab.local
+172.16.1.220	host2.lab.local
+172.16.1.230	host3.lab.local
 
 
 

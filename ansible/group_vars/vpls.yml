@@ -1,6 +1,9 @@
 ---
 ansible_device_os: ios
+dev_os: ios
 cli:
   username: "{{ansible_user}}"
   password: "{{ansible_password}}"
   host:     "{{inventory_hostname}}"
+  transport: cli
+  dev_os: ios
